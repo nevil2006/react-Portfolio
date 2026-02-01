@@ -1,25 +1,31 @@
-function Navbar() {
-  return (
-    <header className="w-full border-b border-[var(--color-border)]">
-      <nav className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
-        <h1 className="text-xl font-bold text-[var(--color-primary)]">
-          MyPortfolio
-        </h1>
+const navLinks = [
+  { href: "#about", label: "About" },
+  { href: "#projects", label: "Projects" },
+  { href: "#experience", label: "Experience" },
+  { href: "#testimonials", label: "Testimonials" },
+];
 
-        <ul className="flex gap-6 text-sm text-[var(--color-muted-foreground)]">
-          <li className="cursor-pointer hover:text-[var(--color-foreground)]">
-            About
-          </li>
-          <li className="cursor-pointer hover:text-[var(--color-foreground)]">
-            Projects
-          </li>
-          <li className="cursor-pointer hover:text-[var(--color-foreground)]">
-            Contact
-          </li>
-        </ul>
+const Navbar = () => {
+  return (
+    <header>
+      <nav>
+        <a href="#" className="text-xl font-bold tracking-wide">
+          PM<span>.</span>
+        </a>
+
+        {/* Desktop Nav */}
+        <div>
+          <div>
+            {navLinks.map((link) => (
+              <a href={link.href} key={link.href}>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
       </nav>
     </header>
   );
-}
+};
 
 export default Navbar;
