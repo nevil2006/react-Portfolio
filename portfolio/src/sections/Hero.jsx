@@ -1,5 +1,5 @@
 function Hero() {
-  return <section>sadasdas</section>;
+  return <section></section>;
 }
 
 export default Hero;

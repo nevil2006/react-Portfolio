@@ -23,19 +23,27 @@
   --color-surface: #1a2329;
 }
 
-@layer base{
-  html{
+@layer base {
+  html {
     scroll-behavior: smooth;
   }
-  body{
+
+  body {
     background-color: var(--color-background);
-    color:var(--color-foreground);
+    color: var(--color-foreground);
     font-family: 'Inter', sans-serif;
   }
-  
-  .font-serif{
+
+  .font-serif {
     font-family: 'Merriweather', serif;
   }
+} /* ✅ base layer CLOSED here */
 
+@layer components {
+  .glass {
+    background-color:color-mix(in srgb,var(--color-surface) 20%,transparent);
+    backdrop-filter:blur(16px);
+    border: 1px solid color-mix(in srgb, var(--color-border)50%,transparent);
+  }
 
 }
