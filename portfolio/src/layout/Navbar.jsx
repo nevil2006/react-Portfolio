@@ -1,3 +1,4 @@
+import {Button} from "../components/button.jsx";
 const navLinks = [
   { href: "#about", label: "About" },
   { href: "#projects", label: "Projects" },
@@ -32,10 +33,11 @@ const Navbar = () => {
             </a>
           ))}
         </div>
-
-      </nav>
+        <div>
+          <Button>Contact Me</Button>
+        </div>
+          </nav>
     </header>
   );
-};
-
+}
 export default Navbar;
